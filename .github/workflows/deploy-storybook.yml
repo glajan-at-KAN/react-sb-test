@@ -40,11 +40,11 @@ jobs:
           git config pull.rebase false
           git checkout main
           git pull
-          # npm install
-          # npm run build-storybook
-          # rm -rf docs
-          # mv storybook-public docs
-          touch docs && echo "hej" >> docs
+          npm install
+          npm run build-storybook
+          rm -rf docs
+          mv storybook-public docs
+          # touch docs && echo "hej" >> docs
           git stash
           git checkout -B gh-pages-for-storybook
           git reset --hard main
