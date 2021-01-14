@@ -40,6 +40,7 @@ jobs:
           git config pull.rebase false
           git checkout main
           git pull
+          git fetch
           git checkout -B gh-pages-for-storybook
           git pull
           git merge main
