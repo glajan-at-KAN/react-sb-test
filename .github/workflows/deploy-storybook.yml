@@ -38,9 +38,9 @@ jobs:
           git config --local user.email "build-bot@assaabloy.com"
           git config --local user.name "Mr Build Bot"
           git checkout main
-          git pull
+          git pull origin main
           git checkout -B gh-pages-for-storybook
-          git pull
+          git pull origin gh-pages-for-storybook
           git merge main
           # npm install
           # npm run build-storybook
