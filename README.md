@@ -8,3 +8,4 @@ This component was bootstrapped with [Direflow](https://direflow.io).
 ```
 
 Use this README to describe your Direflow Component# react-sb-test
+# react-sb-test
