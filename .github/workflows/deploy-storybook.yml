@@ -31,8 +31,7 @@ jobs:
           echo Running 'npm install'
           # npm install
 
-      # Runs a set of commands using the runners shell
-
+      # Builds Storybook site and pushes it to the Github Pages branch.
       - name: Build Storybook public site
         run: |
           git config --local user.email "build-bot@assaabloy.com"
