@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --local user.email "build-bot@assaabloy.com"
           git config --local user.name "Mr Build Bot"
-          git checkout develop
+          git checkout main
           git pull
           git checkout -B gh-pages-for-storybook
           git merge develop
