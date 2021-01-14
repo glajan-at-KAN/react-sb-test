@@ -40,7 +40,7 @@ jobs:
           git checkout main
           git pull
           git checkout -B gh-pages-for-storybook
-          git merge develop
+          git merge main
           # npm install
           # npm run build-storybook
           # rm -rf docs
