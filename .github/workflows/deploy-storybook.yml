@@ -45,6 +45,6 @@ jobs:
           # npm run build-storybook
           # rm -rf docs
           # mv storybook-public docs
-          touch docs
+          touch docs && echo "hej" >> docs
           git add docs && git commit -m "Updates Storybook public site." && git push
 
