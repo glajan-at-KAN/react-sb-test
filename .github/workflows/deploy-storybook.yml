@@ -46,5 +46,6 @@ jobs:
           # rm -rf docs
           # mv storybook-public docs
           touch docs && echo "hej" >> docs
-          git add docs && git commit -m "Updates Storybook public site." && git push
+          git add docs && git commit -m "Updates Storybook public site."
+          git push --set-upstream origin gh-pages-for-storybook
 
