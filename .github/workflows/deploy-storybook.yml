@@ -42,6 +42,7 @@ jobs:
           git pull
           git fetch
           git checkout -B gh-pages-for-storybook
+          git branch --set-upstream-to=origin/gh-pages-for-storybook gh-pages-for-storybook
           git pull
           git merge main
           # npm install
