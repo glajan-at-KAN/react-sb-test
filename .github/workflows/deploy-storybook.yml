@@ -43,10 +43,9 @@ jobs:
           npm run build-storybook
           rm -rf docs
           mv storybook-public docs
-          # touch docs && echo "hej" >> docs
           git stash
           git checkout -B gh-pages-for-storybook
           git reset --hard main
-          git stash pop
+          git stash pop --quiet
           git add docs && git commit -m "Updates Storybook public site."
           git push --set-upstream origin gh-pages-for-storybook --force
