@@ -50,4 +50,4 @@ jobs:
           git reset --hard main
           git stash pop
           git add docs && git commit -m "Updates Storybook public site."
-          git push --set-upstream origin gh-pages-for-storybook
+          git push --set-upstream origin gh-pages-for-storybook --force
