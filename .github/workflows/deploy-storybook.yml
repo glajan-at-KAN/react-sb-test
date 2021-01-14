@@ -35,7 +35,8 @@ jobs:
       # npm run build-storybook
       - name: Build Storybook public site
         run: |
+          touch docs
           git config --local user.email "name@email.com"
           git config --local user.name "username"
-          git add storybook-static && git commit -m "Updates Storybook public site." && git push
+          git add docs && git commit -m "Updates Storybook public site." && git push
 
