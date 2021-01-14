@@ -29,10 +29,27 @@ jobs:
       - name: Run "npm install"
         run: |
           echo Running 'npm install'
-          npm install
+          # npm install
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+
+      - name: Build Storybook public site
         run: |
-          echo Run 'npm run build-storybook'
-          echo npm run build-storybook
+          git config --local user.email "build-bot@assaabloy.com"
+          git config --local user.name "Mr Build Bot"
+          git config pull.rebase false
+          git checkout main
+          git pull
+          git fetch
+          git checkout -B gh-pages-for-storybook
+          git branch --set-upstream-to=origin/gh-pages-for-storybook gh-pages-for-storybook
+          git pull
+          git merge main
+          # npm install
+          # npm run build-storybook
+          # rm -rf docs
+          # mv storybook-public docs
+          touch docs && echo "hej" >> docs
+          git add docs && git commit -m "Updates Storybook public site."
+          git push --set-upstream origin gh-pages-for-storybook
+
