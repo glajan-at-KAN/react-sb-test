@@ -32,11 +32,19 @@ jobs:
           # npm install
 
       # Runs a set of commands using the runners shell
-      # npm run build-storybook
+
       - name: Build Storybook public site
         run: |
+          git config --local user.email "build-bot@assaabloy.com"
+          git config --local user.name "Mr Build Bot"
+          git checkout develop
+          git pull
+          git checkout -B gh-pages-for-storybook
+          git merge develop
+          # npm install
+          # npm run build-storybook
+          # rm -rf docs
+          # mv storybook-public docs
           touch docs
-          git config --local user.email "name@email.com"
-          git config --local user.name "username"
           git add docs && git commit -m "Updates Storybook public site." && git push
 
