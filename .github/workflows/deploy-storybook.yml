@@ -29,11 +29,13 @@ jobs:
       - name: Run "npm install"
         run: |
           echo Running 'npm install'
-          npm install
+          # npm install
 
       # Runs a set of commands using the runners shell
+      # npm run build-storybook
       - name: Build Storybook public site
         run: |
-          npm run build-storybook
+          git config --local user.email "name@email.com"
+          git config --local user.name "username"
           git add storybook-static && git commit -m "Updates Storybook public site." && git push
 
